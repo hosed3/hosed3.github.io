@@ -31,7 +31,7 @@ window.onload = digitar
 
 // Text que escreve a apaga aos poucos
 var div = document.getElementById('log');
-var textos = ['Rolety','Plisy' ,'Żaluzje aluminiowe','Zaluzje aluminiowe i drewniane', 'Moskitiery'];
+var textos = ['Rolety','Plisy' ,'Żaluzje aluminiowe','Żaluzje drewniane', 'Moskitiery'];
 
 function escrever(str, done) {
     var char = str.split('').reverse();
