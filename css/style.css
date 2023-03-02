@@ -260,6 +260,39 @@ img{
 
 /************************* PROJETOS ******************/
 
+.projetos .content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.projetos .content .projetosBx{
+    width: 30%; /*50%*/
+    padding: 15px 5px 15px 5px; /*20px*/
+}
+
+.projetos .content .projetosBx img{
+    max-width: 100%;
+    border-radius: 10px; /*100%*/
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.not-allowed {
+    cursor: not-allowed;
+}
+
+.repositorio a{
+    text-decoration: none;
+    color: #002D62;
+    letter-spacing: 0.2em;
+    font-size: 18px;
+}
+
+.repositorio a:hover{
+    color: #00BFFF;
+}
+
 
 /***************** FOOTER ***************/
 /*
