@@ -1,148 +1,459 @@
 <!DOCTYPE html>
-<html lang="pl">
-<head>
-    <script src="https://kit.fontawesome.com/d8c894e8dd.js" crossorigin="anonymous"></script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KL GROUP</title>
-    <meta name="keywords" content="Front end developer, HTML,CSS,XML,JavaScript, React Js, React Native Node Js, jquery, bootstrap4, figma, adobe xd, php, sql, banco de dados, portfolio, ui, ux, designer, faculdade, ios, wordpress, loja virtual, e-commerce, aplicativos, aplicações, software, stackoverflow, git, github, thiago, santos, analista de sistemas, nerd, ciencia da computacao, tecnologias, ferramentas, projetos, dinamico, web design, developer, desenvolvimento, desenvolvedor, Salvador, desenvolvedor web,  Desenvolvedor Front end, programador, back end, indexTobe, linguagens de programação">
-    <meta name="author" content="Dawid Chojecki">
-    <meta name="copyright" content="© 2023 KL GROUP" />
-    <meta property="og:title" content="KL GROUP rolety / żaluzje" />
-    <meta property="og:description" content="Desenvolvedor Front end, Programador JavaScript, UI Designer, React Js, construindo produtos significativos de alto desempenho e de ótima qualidade. Muito apaixonado por tecnologia, desenvolvimento de programas, aplicativos, sistemas, UX & UI Design de interface." />
-    
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="shortcut icon" href="image/favicon.png" type="image/x-icon" sizes="32x3">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-    
-</head>
-<body class="show">
-    <header>
-        <img href="#home" class="logo" src="image/logo.png" width="60">
-        <div class="toggle" onclick="toggleMenu()"></div>
-        <ul class="menu">
-            <li><a href="#home" onclick="toggleMenu()">Strona główna</a></li>
-            <li><a href="#sobre-mim" onclick="toggleMenu()">O nas</a></li>
-            <li><a href="#tecnologias" onclick="toggleMenu()">Oferta</a></li>
-            <li><a href="#projetos" onclick="toggleMenu()">Projekty</a></li>
-            <li><a href="#contato" onclick="toggleMenu()">Kontakt</a></li>
-        </ul>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/service-5.png" type="image/x-icon" />
+    <title>ProBuilders</title>
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- header section starts  -->
+
+    <header class="header">
+      
+      <a href="#" class="logo">Pro<span>Builders</span></a>
+
+      <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="#services">services</a>
+        <a href="#projects">projects</a>
+        <a href="#pricing">pricing</a>
+        <a href="#contact">contact</a>
+      </nav>
+
+
+      <form action="" class="search-form">
+        <input
+          type="search"
+          name=""
+          placeholder="search here..."
+          id="search-box"
+        />
+        <label for="search-box" class="fas fa-search"></label>
+      </form>
+
+      <form action="" class="login-form">
+        <h3>login form</h3>
+        <input type="email" placeholder="enter your email" class="box" />
+        <input type="password" placeholder="enter your password" class="box" />
+        <div class="flex">
+          <input type="checkbox" name="" id="remember-me" />
+          <label for="remember-me">remember me</label>
+          <a href="#">forgot password?</a>
+        </div>
+        <input type="submit" value="login now" class="btn" />
+        <p>don't have an account <a href="#">create one!</a></p>
+      </form>
     </header>
-    <section class="banner" id="home">
-        <div class="textBx" style="animation: slide-bottom 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;">
-            <h2><span>ROLETY / ŻALUZJE</span></h2>
-            <h3 id="result"></h3>
-            <h3 id="log"></h3>
-            <a href="#tecnologias" class="btn">Oferta</a>
-        </div>
-    </section>
-    <section class="sobre-mim" id="sobre-mim">
-        <div class="heading">
-            <h2 data-anime="top">O nas</h2>
-        </div>
-        <div class="content">
-            <div class="contentBx w50">
-                <h3 data-anime="top"><strong style="color: #00BFFF;">KL GROUP</strong></h3>
-                <p data-anime="top">KL Group to firma z Olsztyna specjalizująca się w montażu różnego rodzaju osłon okiennych, w tym <strong style="color: #00BFFF;"> rolet, plis, żaluzji aluminiowych i drewnianych oraz moskitier.</strong> Z naszych usług korzystają zarówno klienci indywidualni, jak i firmy i instytucje.<strong style="color: #00BFFF;"> Działamy na terenie calego województwa warmińsko-mazurskiego </strong></p><br>
 
-                <p data-anime="top">Nasza firma istnieje na rynku od wielu lat i zyskała zaufanie klientów dzięki profesjonalnemu podejściu do każdego zlecenia oraz wysokiej jakości wykonywanych prac. Działamy szybko i sprawnie, a nasze rozwiązania są dostosowane do indywidualnych potrzeb i preferencji klienta.</strong></p><br>
+    <div class="contact-info">
+      <div id="close-contact-info" class="fas fa-times"></div>
 
-                <p data-anime="top">Wszystkie nasze produkty są wykonane z materiałów najwyższej jakości, co gwarantuje ich trwałość i odporność na działanie czynników zewnętrznych. </p><br>
+      <div class="info">
+        <i class="fas fa-phone"></i>
+        <h3>phone number</h3>
+        <p>+123-456-7890</p>
+        <p>+111-222-3333</p>
+      </div>
 
-               <p data-anime="top">Nasz zespół składa się z doświadczonych i wykwalifikowanych specjalistów, którzy są w stanie doradzić klientowi w wyborze najlepszego rozwiązania oraz profesjonalnie zainstalować osłony okienne. <strong style="color: #00BFFF;">Gwarantujemy pełne zadowolenie z wykonanej pracy oraz konkurencyjne ceny.</strong></p>
+      <div class="info">
+        <i class="fas fa-envelope"></i>
+        <h3>email address</h3>
+        <p>example@gmail.com</p>
+        <p>example2@gmail.com</p>
+      </div>
 
-            </div>
-            <div class="w50">
-                <img data-anime="left" src="image/perfil.jpeg" width="350" class="img img-th" alt="Thiago Santos">
-            </div>
-        </div>
-    </section>
-    
+      <div class="info">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>office address</h3>
+        <p>mumbai, india - 400104</p>
+      </div>
 
-    <!--Tecnologias-->
-    <section class="tecnologias" id="tecnologias">
-        <div class="heading white">
-            <h2 data-anime="top">Oferta</h2>
-            <p data-anime="top" style= "letter-spacing: 0.3em; font-size: 25px;"><strong style="color: #00BFFF;">BEZPŁATNY POMIAR I MONTAŻ</strong></p>
-            <div data-anime="top">
-                <hr  style="width: 100%; border: 0; height: 1px; background: #000;opacity: 0.1;">
-            </div>
-        </div>
-        <div class="content">
-
-            <div data-anime="top1" class="tecnologiasBx">
-                <i class="fa-solid fa-scroll" style="font-size:50px; color:#dd4b25;"></i>
-                <h2>Rolety</h2>
-                <p>Rolety dostępne są w różnych kolorach, wzorach i materiałach, dzięki czemu można je dopasować do stylu wnętrza.</p>
-            </div>
-
-            <div data-anime="top2" class="tecnologiasBx">
-                <i class="fa-solid fa-align-center" style="font-size:50px; color:#318CE7;"></i>
-                <h2>Plisy</h2>
-                <p>Plisy wyróżniają się łatwością w montażu i obsłudze oraz nie zajmują wiele miejsca, co jest szczególnie ważne w małych pomieszczeniach.</p>
-            </div>
-
-
-            <div data-anime="top3" class="tecnologiasBx">
-                <i class="fa-solid fa-bars" style="font-size:50px; color:#efd81d;"></i>
-                <h2>Żaluzje aluminiowe i drewniane</h2>
-                <p>Żaluzje składają się z cienkich lameli, które można obracać wokół swojej osi, dzięki czemu można dostosować ilość światła do indywidualnych potrzeb.
-                </p>
-            </div>
-            
-
-            <div data-anime="top4" class="tecnologiasBx">
-                <i class="fa-solid fa-mosquito-net" style="font-size:50px; color:#00ff00;"></i>
-                <h2>Moskitiery</h2>
-                <p>Moskitiery skutecznie blokują dostęp owadów, takich jak komary, muchy czy meszki, jednocześnie pozwalając na swobodny przepływ powietrza i światła. W sprzedaży można znaleźć różne rodzaje moskitier, takie jak stałe, przesuwne, rolowane lub plisowane, które można dopasować do indywidualnych potrzeb i wymagań użytkowników.</p>
-            </div>
-
-        </div>
-
-
-        </div>
-        
-    </section>
-
-    <!--Projetos-->
-    <section class="projetos" id="projetos">
-    <!-- Place <div> tag where you want the feed to appear -->
-<div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div><!-- The Javascript can be moved to the end of the html page before the </body> tag --><script type="text/javascript">
-    /* curator-feed-default-feed-layout */
-    (function(){
-    var i,e,d=document,s="script";i=d.createElement("script");i.async=1;i.charset="UTF-8";
-    i.src="https://cdn.curator.io/published/70bb5ab9-8610-457e-9251-2de99bdd5402.js";
-    e=d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
-    })();
-    </script>
-    </section>
-  
-    
-
-    <section class="contato" id="contato">
-        <div class="heading">
-            <h2 data-anime="top">Kontakt</h2>
-            <div class="redes-sociais">
-                <ul data-anime="buttom" class="icons">
-                    <li ><a href="https://www.instagram.com/kl.group/" class="fab fa-instagram fa-2x" target="_blank"></a></li>
-                    <li><a  href="mailto:kl.group.olsztyn@gmail.com" class="far fa-envelope fa-2x"></a></li>
-                </ul>
-                <p data-anime="bottom" style="margin-top: 50px;">Tel. 661 992 395
-                     <br> E-mail: kl.group.olsztyn@gmail.com</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- End Footer -->
-    <a onclick="topFunction()" id="back-to-top" title="Go to top"><i class="fas fa-chevron-up"></i></a>
-
-    <!--Footer-->
-    <div class="footer">
-        <p>Copyright &copy; <span id="hora"></span> KL Group</p>
+      <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+      </div>
     </div>
 
-    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
-    <script src="js/script.js" type="text/javascript"></script>
-</body>
+    <!-- header section ends -->
+
+    <!-- home section starts  -->
+
+    <section class="home" id="home">
+      <div class="swiper home-slider">
+        <div class="swiper-wrapper">
+          <section
+            class="swiper-slide slide"
+            style="background: url(images/home-slide-1.jpg) no-repeat"
+          >
+            <div class="content">
+              <h3>we provide best service</h3>
+              <p>
+                Transforming spaces into masterpieces, one refurbishment at a time. <strong>Probuilders - Your partner in creating your dream space.</strong>
+              </p>
+            </div>
+          </section>
+
+          <section
+            class="swiper-slide slide"
+            style="background: url(images/home-slide-2.jpg) no-repeat"
+          >
+            <div class="content">
+              <h3>making dream come to life</h3>
+              <p>
+                At Probuilders, we bring your dream space to life through expert refurbishments in London. Let us turn your vision into reality.
+              </p>
+            </div>
+          </section>
+
+          <section
+            class="swiper-slide slide"
+            style="background: url(images/home-slide-3.jpg) no-repeat"
+          >
+            <div class="content">
+              <h3>from concept to creation</h3>
+              <p>
+                From concept to creation, Probuilders is your partner in creating the space you've always dreamed of in London. Let us bring your vision to life with our expert refurbishment services.
+              </p>
+            </div>
+          </section>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- home section ends -->
+
+    <!-- about section starts  -->
+
+    <section class="about" id="about">
+      <h1 class="heading">about us</h1>
+
+      <div class="row">
+        <div class="video">
+          <video src="images/about-vid.mp4" loop muted autoplay></video>
+        </div>
+
+        <div class="content">
+          <h3>We will provide you the best work which you dreamt for!</h3>
+          <p>
+            At Pro Builders, we take pride in being the UK's top building team. With our 100% satisfaction guarantee, you can trust that we'll deliver safe, reliable, and high-quality services at an affordable price. As experts in our field, we're committed to bringing your dream space to life. Contact us today to start your project.
+          </p>
+        </div>
+      </div>
+
+      <div class="box-container">
+        <div class="box">
+          <h3>10+</h3>
+          <p>years of experience</p>
+        </div>
+
+        <div class="box">
+          <h3>1500+</h3>
+          <p>project completed</p>
+        </div>
+
+        <div class="box">
+          <h3>790+</h3>
+          <p>satiesfied clients</p>
+        </div>
+
+        <div class="box">
+          <h3>100+</h3>
+          <p>active workers</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- about section ends -->
+
+    <!-- services section starts  -->
+
+    <section class="services" id="services">
+      <h1 class="heading">our services</h1>
+
+      <div class="box-container">
+
+        <div class="box">
+          <img src="images/service-2.png" alt="" />
+          <h3>Domestic Building</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+            necessitatibus.
+          </p>
+        </div>
+
+        <div class="box">
+          <img src="images/service-4.png" alt="" />
+          <h3>Gardens</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+            necessitatibus.
+          </p>
+        </div>
+
+        <div class="box">
+          <img src="images/service-1.png" alt="" />
+          <h3>Tiling</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+            necessitatibus.
+          </p>
+        </div>
+
+
+        <div class="box">
+          <img src="images/service-7.png" alt="" />
+          <h3>Painting</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+            necessitatibus.
+          </p>
+        </div>
+
+        <div class="box">
+          <img src="images/service-6.png" alt="" />
+          <h3>Home Insulation</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+            necessitatibus.
+          </p>
+        </div>
+
+        <div class="box">
+          <img src="images/service-8.png" alt="" />
+          <h3>Full House Renovation</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+            necessitatibus.
+          </p>
+        </div>
+
+        <div class="box">
+          <img src="images/service-1.png" alt="" />
+          <h3>Loft Conversions</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+            necessitatibus.
+          </p>
+        </div>
+
+        <div class="box">
+          <img src="images/service-5.png" alt="" />
+          <h3>Extensions</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+            necessitatibus.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- services section ends -->
+
+    <!-- projects section starts  -->
+
+    <section class="projects" id="projects">
+      <h1 class="heading">our projects</h1>
+
+      <div class="box-container">
+        <a href="images/project-1.jpg" class="box">
+          <div class="image">
+            <img src="images/project-1.jpg" alt="" />
+          </div>
+          <div class="content">
+            <div class="info">
+              <h3>dream home</h3>
+              <p>construction, design</p>
+            </div>
+            <i class="fas fa-plus"></i>
+          </div>
+        </a>
+
+        <a href="images/project-2.jpg" class="box">
+          <div class="image">
+            <img src="images/project-2.jpg" alt="" />
+          </div>
+          <div class="content">
+            <div class="info">
+              <h3>dream home</h3>
+              <p>construction, design</p>
+            </div>
+            <i class="fas fa-plus"></i>
+          </div>
+        </a>
+
+        <a href="images/project-3.jpg" class="box">
+          <div class="image">
+            <img src="images/project-3.jpg" alt="" />
+          </div>
+          <div class="content">
+            <div class="info">
+              <h3>dream home</h3>
+              <p>construction, design</p>
+            </div>
+            <i class="fas fa-plus"></i>
+          </div>
+        </a>
+
+        <a href="images/project-4.jpg" class="box">
+          <div class="image">
+            <img src="images/project-4.jpg" alt="" />
+          </div>
+          <div class="content">
+            <div class="info">
+              <h3>dream home</h3>
+              <p>construction, design</p>
+            </div>
+            <i class="fas fa-plus"></i>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- projects section ends -->
+
+    <!-- pricing section starts  -->
+
+    <section class="pricing" id="pricing">
+      <h1 class="heading">our pricing</h1>
+
+      <div class="box-container">
+        <div class="box">
+          <i class="fas fa-home"></i>
+          <h3>basic plan</h3>
+          <div class="price"><span>$</span>250<span>/mo</span></div>
+          <div class="list">
+            <p>interior design</p>
+            <p>refurbishment</p>
+            <p>material supply</p>
+            <p>maintenance</p>
+            <p>24/7 support</p>
+          </div>
+          <a href="#" class="btn">choose plan</a>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-building"></i>
+          <h3>premium plan</h3>
+          <div class="price"><span>$</span>650<span>/mo</span></div>
+          <div class="list">
+            <p>interior design</p>
+            <p>refurbishment</p>
+            <p>material supply</p>
+            <p>maintenance</p>
+            <p>24/7 support</p>
+          </div>
+          <a href="#" class="btn">choose plan</a>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-city"></i>
+          <h3>ultimate plan</h3>
+          <div class="price"><span>$</span>1250<span>/mo</span></div>
+          <div class="list">
+            <p>interior design</p>
+            <p>refurbishment</p>
+            <p>material supply</p>
+            <p>maintenance</p>
+            <p>24/7 support</p>
+          </div>
+          <a href="#" class="btn">choose plan</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- pricing section ends -->
+
+    <!-- contact section starts  -->
+
+    <section class="contact" id="contact">
+      <h1 class="heading">contact us</h1>
+
+      <div class="row">
+
+        <iframe
+          class="map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d183511.37428994282!2d-0.282488754647878!3d51.53505532073952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondyn%2C%20Wielka%20Brytania!5e0!3m2!1spl!2spl!4v1677960180990!5m2!1spl!2spl"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+
+        <form action="">
+          <h3>get in touch</h3>
+          <input type="text" placeholder="name" class="box" />
+          <input type="email" placeholder="email" class="box" />
+          <input type="number" placeholder="phone" class="box" />
+          <textarea
+            name=""
+            placeholder="message"
+            class="box"
+            id=""
+            cols="30"
+            rows="10"
+          ></textarea>
+          <input type="submit" value="send message" class="btn" />
+        </form>
+      </div>
+    </section>
+
+    <!-- contact section ends -->
+
+
+    <!-- client logo section starts -->
+
+    
+
+    <!-- client logo section ends -->
+
+    <!-- footer section starts  -->
+
+    <section class="footer">
+
+      <div class="credit">
+        created by
+        <a>
+          <span>Dawid Chojecki</span>
+        </a>
+        | all rights reserved!
+      </div>
+    </section>
+
+    <!-- footer section ends -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+
+    <script>
+      lightGallery(document.querySelector(".projects .box-container"));
+    </script>
+  </body>
 </html>
