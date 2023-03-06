@@ -1,100 +1,75 @@
-let navbar = document.querySelector('.header .navbar');
-let searchForm = document.querySelector('.header .search-form');
-let loginForm = document.querySelector('.header .login-form');
-let contactInfo = document.querySelector('.contact-info');
+window.addEventListener('scroll', function(){
+   var header = document.querySelector('header');
+   header.classList.toggle('stick', window.scrollY > 0);
+})
 
-document.querySelector('#menu-btn').onclick = () =>{
-   navbar.classList.toggle('active');
-   searchForm.classList.remove('active');
-   loginForm.classList.remove('active');
-};
-
-document.querySelector('#search-btn').onclick = () =>{
-   searchForm.classList.toggle('active');
-   navbar.classList.remove('active');
-   loginForm.classList.remove('active');
-};
-
-document.querySelector('#login-btn').onclick = () =>{
-   loginForm.classList.toggle('active');
-   navbar.classList.remove('active');
-   searchForm.classList.remove('active'); 
-};
-
-document.querySelector('#info-btn').onclick = () =>{
-   contactInfo.classList.add('active');
+function toggleMenu(){
+   var menutoggle = document.querySelector('.toggle');
+   var menu = document.querySelector('.menu');
+   menutoggle.classList.toggle('active');
+   menu.classList.toggle('active');
 }
 
-document.querySelector('#close-contact-info').onclick = () =>{
-   contactInfo.classList.remove('active');
+var backToTop = document.getElementById("back-to-top");
+
+window.onscroll = function() {scrollFunction()};
+    
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        backToTop.style.display = "block";
+    }else {
+        backToTop.style.display = "none";
+      }
+    }
+
+function topFunction() { 
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
 
-window.onscroll = () =>{
-   navbar.classList.remove('active');
-   searchForm.classList.remove('active');
-   loginForm.classList.remove('active');
-   contactInfo.classList.remove('active');
+
+
+
+
+
+function openModal() {
+   document.getElementById("myModal").style.display = "block";
+ }
+ 
+ function closeModal() {
+   document.getElementById("myModal").style.display = "none";
+ }
+ 
+ var slideIndex = 1;
+ showSlides(slideIndex);
+ 
+ function plusSlides(n) {
+   showSlides(slideIndex += n);
+ }
+ 
+ function currentSlide(n) {
+   showSlides(slideIndex = n);
+ }
+ 
+ function showSlides(n) {
+   var i;
+   var slides = document.getElementsByClassName("mySlides");
+   var dots = document.getElementsByClassName("demo");
+   var captionText = document.getElementById("caption");
+   if (n > slides.length) {slideIndex = 1}
+   if (n < 1) {slideIndex = slides.length}
+   for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";
+   }
+   for (i = 0; i < dots.length; i++) {
+       dots[i].className = dots[i].className.replace(" active", "");
+   }
+   slides[slideIndex-1].style.display = "block";
+   dots[slideIndex-1].className += " active";
+   captionText.innerHTML = dots[slideIndex-1].alt;
 }
 
-var swiper = new Swiper(".home-slider", {
-   loop:true,
-   grabCursor:true,
-   navigation: {
-     nextEl: ".swiper-button-next",
-     prevEl: ".swiper-button-prev",
-   },
-});
 
-var swiper = new Swiper(".reviews-slider", {
-   loop:true,
-   grabCursor:true,
-   spaceBetween: 20,
-   breakpoints: {
-      640: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      991: {
-        slidesPerView: 3,
-      },
-   },
-});
-
-var swiper = new Swiper(".blogs-slider", {
-   loop:true,
-   grabCursor:true,
-   spaceBetween: 20,
-   breakpoints: {
-      640: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      991: {
-        slidesPerView: 3,
-      },
-   },
-});
-
-var swiper = new Swiper(".logo-slider", {
-   loop:true,
-   grabCursor:true,
-   spaceBetween: 20,
-   breakpoints: {
-      450: {
-         slidesPerView: 2,
-       },
-      640: {
-        slidesPerView: 3,
-      },
-      768: {
-        slidesPerView: 4,
-      },
-      1000: {
-        slidesPerView: 5,
-      },
-   },
-});
+var d = new Date();
+var n = d.getFullYear();
+document.getElementById("hora").innerHTML = n;

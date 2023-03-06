@@ -751,12 +751,10 @@ section {
 }
 
 .contact {
-  background: var(--black);
+  background: var(--light-bg);
+ 
 }
 
-.contact .heading {
-  color: var(--white);
-}
 
 .contact .row {
   display: -webkit-box;
@@ -871,8 +869,9 @@ section {
 }
 
 .footer {
+  background: var(--black);
   text-align: center;
-  padding-bottom: 10rem;
+  
 }
 
 .footer .links .btn {
@@ -881,10 +880,10 @@ section {
 
 .footer .credit {
   font-size: 2rem;
-  color: var(--black);
+  color: var(--white);
   text-transform: capitalize;
-  margin-top: 2rem;
-  padding-top: 1rem;
+
+  
 }
 
 .footer .credit span {
