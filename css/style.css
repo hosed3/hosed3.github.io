@@ -1078,3 +1078,7 @@ header .navbar .dropdown-menu {
     outline: none;
     display: block;
 }
+#sg {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
